@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone GitHub Project') {
+            steps {
+                git 'https://github.com/Pramoddhote/php-webapp.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t my-php-app:latest .'
+            }
+        }
+
+        stage('Run Docker Image') {
+            steps {
+                sh 'docker run -d -p 80:8080 my-php-app:latest'
+            }
+        }
+    }
+}
