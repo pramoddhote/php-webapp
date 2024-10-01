@@ -1,8 +1,8 @@
 <?php
 // Configuration
-$db_host = 'database-1.cteeu4qicycp.us-east-1.rds.amazonaws.com';
+$db_host = 'rds-database-endpoint-url';
 $db_username = 'admin';
-$db_password = '21091998';
+$db_password = 'password';
 $db_name = 'webapp';
 
 // Connect to RDS database
