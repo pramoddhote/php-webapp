@@ -5,7 +5,7 @@
 #EXPOSE 80
 #CMD ["apache2-foreground"]
 
-FROM nginx:latest
+FROM nginx:alpine
 
 EXPOSE 80
 
